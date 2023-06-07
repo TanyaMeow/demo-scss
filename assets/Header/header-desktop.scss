@@ -1,0 +1,69 @@
+@use "../Common/common";
+
+@media (min-width: common.$max_mobile_width) {
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header_container {
+    height: 67px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .header_left {
+    display: flex;
+  }
+
+  .logo_header {
+    margin-bottom: 0 !important;
+  }
+
+  .header_address {
+    padding-left: 24px;
+    width: 133px;
+    height: 38px;
+  }
+
+  .city,
+  .address {
+    margin: 0 0 0 22px;
+  }
+
+  .address {
+    color: #868686;
+  }
+
+  .map_icon {
+    position: absolute;
+  }
+
+  .header_contact {
+    display: flex;
+    align-items: center;
+    width: 406px;
+    margin-left: 285px;
+    justify-content: flex-end;
+  }
+
+  .number {
+    margin-right: 35px;
+    margin-left: 7px;
+    font-size: 16px;
+  }
+
+  .sign_up_header {
+    display: block !important;
+    &:hover {
+      content: '';
+      background-color: #00D29F;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "../Common/common";
+
+@media (min-width: common.$max_mobile_width) {
+  .banner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: #F8FBFA;
+    justify-content: center;
+  }
+
+  .content_banner {
+    display: flex;
+    position: relative;
+    width: 416px;
+    height: 227px;
+    margin-left: 362px;
+    margin-right: 164px;
+    flex-direction: column;
+  }
+
+  .title_banner {
+    color: common.$font_color;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    width: 367px;
+  }
+
+  .subtitle_banner {
+    color: common.$font_color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}

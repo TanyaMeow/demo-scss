@@ -1,0 +1,72 @@
+@use "../Common/common";
+
+@media (max-width: common.$max_mobile_width) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .logo_header {
+    width: 62px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .header_container {
+    display: grid;
+    background-color: #FFFFFF;
+    height: 67px;
+  }
+
+  .header_left {
+    display: flex;
+  }
+
+  .header_contact {
+    position: absolute;
+    margin-left: 218px;
+  }
+
+  .number {
+    font-size: 16px;
+    color: #364844;
+    font-weight: 700;
+  }
+
+  .city {
+    font-size: 13px;
+    margin: 35px 0 0 92px;
+  }
+
+  .map_icon,
+  .whatsapp_icon,
+  .address {
+    display: none;
+  }
+
+  .sign_up_header {
+    display: none;
+    width: 196px !important;
+    height: 43px !important;
+    color: #1FA181;
+    background-color: #FFFFFF;
+    margin: 247px 0 0 17px;
+    z-index: 1;
+    transform: translateX(-100%);
+    animation: ani 1s forwards;
+    &:hover {
+      content: '';
+      background-color: common.$light_green_color;
+      color: #FFFFFF;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+  }
+
+  @keyframes ani {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateY(0);}
+  }
+}

@@ -1,0 +1,72 @@
+@use '../Common/common';
+
+@mixin content {
+  content: '';
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  background: #1FA181;
+  margin: 0 auto;
+}
+
+@media (max-width: common.$max_mobile_width) {
+  .menu {
+    background-color: rgba(69, 146, 127, 0.9);
+    content-visibility: auto;
+    position: relative;
+    backdrop-filter: blur(2px);
+    height: 0;
+    width: 0;
+    padding: 0;
+    transition: width 1s;
+  }
+
+  .navigation {
+    margin: 48px 0 0 19px;
+  }
+
+  .close {
+    @include content;
+    transform: rotate(45deg);
+    &:after {
+      @include content;
+      transform: rotate(90deg);
+    }
+  }
+
+  .open {
+    top: 12px;
+    @include content;
+      &:after{
+        @include content;
+        bottom: 11px;
+      }
+      &:before {
+        @include content;
+        top: 10px;
+      }
+  }
+
+  .menu_header {
+    position: relative;
+    width: 37px;
+    height: 26px;
+    display: block;
+    margin: 20px 43px 0 17px;
+  }
+
+  .menu_header_open {
+    position: relative;
+    width: 37px;
+    height: 26px;
+    display: block;
+  }
+
+  .menu_header_close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: none;
+    margin: 10px 0 0 4px;
+  }
+}

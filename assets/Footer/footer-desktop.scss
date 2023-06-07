@@ -1,0 +1,41 @@
+@use '../Common/common';
+
+@media (min-width: common.$max_mobile_width) {
+  footer {
+    display: flex;
+    background-color: #08664F;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 144px;
+  }
+
+  .footer_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1140px;
+  }
+
+  .footer {
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 43px;
+    font-size: 16px;
+  }
+
+  .footer_social_bar {
+    display: flex;
+    width: 135px;
+  }
+
+  .footer_social_item {
+    margin-right: 15px;
+  }
+}
